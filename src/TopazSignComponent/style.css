@@ -1,0 +1,134 @@
+.SignContainer{
+    background-color: rgb(246, 246, 246);
+    width: 800px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.SignContainer .title{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    padding-left: 10px;
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+.SignContainer .title p{
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.SignContainer .top_controls{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.SignContainer .top_controls button, .SignContainer button{
+    background-color: rgba(0, 0, 0, .05);
+    color: #333;
+    width: 140px;
+    height: 40px;
+    border-radius: 0;
+    box-shadow: rgba(39, 39, 39, .2) 0px 2px 4px;
+    border: none;
+    cursor: pointer;
+    transition: transform ease-in .2s;
+}
+
+.SignContainer .top_controls button:hover{
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.SignContainer .top_controls button.clean{
+    background-color: #10cd6d;
+    color: white;
+}
+
+.SignContainer .top_controls button.clean:hover{
+    background-color: #0ea95b;
+    color: white;
+}
+
+.SignContainer .top_controls button.export{
+    background-color: #292fd9;
+    color: white;
+}
+
+.SignContainer .top_controls button.export:hover{
+    background-color: #1b20b1;
+    color: white;
+}
+
+.SignContainer .top_controls button:hover, .SignContainer .footer button:hover{
+    transform: translateY(-2px);
+}
+
+.SignContainer .top_controls button.send{
+    background-color: #0e9905;
+    color: white;
+}
+
+.SignContainer .top_controls button.send:hover{
+    background-color: #0a7103;
+    color: white;
+}
+
+
+.SignContainer .sign-panel{
+    background-color: white;
+    border: 3px solid rgba(255, 209, 2, 0.8);
+    border-radius: 4px;
+    width: 100%;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(39, 39, 39, .2) 0px 2px 4px;
+}
+
+.SignContainer .sign-panel canvas{
+    background-color: white;
+    border-radius: 2px;
+    align-self: center;
+    width: 300px;
+}
+
+.SignContainer .footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.SignContainer .footer button{
+    width: 140px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.SignContainer .footer button.cancel{
+    background-color: #e92c2c;
+    color: white;
+}
+
+.SignContainer .footer button.cancel:hover{
+    background-color: #c22323;
+    color: white;
+}
