@@ -24,7 +24,7 @@
 
 .SignContainer .title p{
     color: #333;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1.2rem;
     padding: 0;
 }
@@ -47,11 +47,21 @@
     box-shadow: rgba(39, 39, 39, .2) 0px 2px 4px;
     border: none;
     cursor: pointer;
-    transition: transform ease-in .2s;
+    transition: transform ease-in .1s;
 }
 
 .SignContainer .top_controls button:hover{
     background-color: rgba(0, 0, 0, .1);
+}
+
+.SignContainer .top_controls button.status.active{
+    background-color: #7f05c1;
+    color: white;
+}
+
+.SignContainer .top_controls button.status:hover.active{
+    background-color: #620096;
+    color: white;
 }
 
 .SignContainer .top_controls button.clean{
@@ -78,6 +88,10 @@
     transform: translateY(-2px);
 }
 
+.SignContainer .top_controls button:active, .SignContainer .footer button:active{
+    transform: translateY(2px);
+}
+
 .SignContainer .top_controls button.send{
     background-color: #0e9905;
     color: white;
@@ -101,6 +115,22 @@
     box-shadow: rgba(39, 39, 39, .2) 0px 2px 4px;
 }
 
+@keyframes lock-pulse{
+    0%{
+        opacity: .2;
+    }
+    100%{
+        opacity: 1;;
+    }
+}
+
+.SignContainer .sign-panel .panel_lock{
+    width: 30px;
+    position: relative;
+    left: 66%;
+    bottom: 40%;
+    animation: lock-pulse ease .4s alternate-reverse infinite;
+}
 .SignContainer .sign-panel canvas{
     background-color: white;
     border-radius: 2px;
@@ -110,11 +140,15 @@
 
 .SignContainer .footer{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     margin-top: 4px;
     margin-bottom: 4px;
+}
+
+.SignContainer .footer p {
+    color: #333;
 }
 
 .SignContainer .footer button{
